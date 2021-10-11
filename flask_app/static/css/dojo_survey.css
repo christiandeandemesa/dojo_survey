@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: white;
+}
+.box {
+    height: 60%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    padding: 10px;
+    background-color: black;
+}
+.name {
+    width: 66%;
+    display: flex;
+    justify-content: space-between;
+}
+.location {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.language {
+    display: flex;
+    justify-content: space-between;
+    align-items: bottom;
+}
+.philosopher {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.comment {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+.button input {
+    height: 70%;
+    width: 30%;
+    border-radius: 5px;
+}
+input, textarea {
+    border: 1px solid black;
+}
+
+form .go_back {
+    height: 100%;
+    width: 20%;
+    border-radius: 5px;
+}
+.go_back {
+    border: 1px solid black;
+}
+.alert {
+    height: 10%;
+    width: 36.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}

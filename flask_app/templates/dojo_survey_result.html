@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dojo_survey.css') }}">
+</head>
+<body>
+    <div class=box>
+        <h1>Submitted Info</h1>
+        <p>Name: {{dojo.name}}</p>
+        <p>Dojo Location: {{dojo.location}}</p>
+        <p>Favorite Language: {{dojo.language}}</p>
+        <p class=comment_result>Comment: {{dojo.comment}}</p>
+        <form action='/return' method='post'>
+            <input type='submit' value='Go Back' class=go_back>
+        </form>
+    </div>
+</body>
+</html>

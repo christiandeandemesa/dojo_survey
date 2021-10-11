@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dojo_survey.css') }}">
+</head>
+<body>
+    <form action='/compile' method='post' class=box>
+        <div class=name>
+            <label for='name'>Your Name:</label>
+            <input type='text' name='name'>
+        </div>
+        <div class=location>
+            <label for='location'>Dojo Location:</label>
+            <select name='location'>
+                <option value='Berkley'>Berkley</option>
+                <option value='Boise'>Boise</option>
+                <option value='Chicago'>Chicago</option>
+                <option value='Dallas'>Dallas</option>
+                <option value='Los Angeles'>Los Angeles</option>
+                <option value='San Jose'>San Jose</option>
+                <option value='Seattle'>Seattle</option>
+                <option value='Tulsa'>Tulsa</option>
+            </select>
+        </div>
+        <div class=language>
+            <label>Favorite Language:</label><br>
+            <input checked type='radio' name='language' value='HTML'>
+            <label for='HTML'>HTML</label>
+            <input type='radio' name='language' value='CSS'>
+            <label for='CSS'>CSS</label>
+            <input type='radio' name='language' value='JavaScript'>
+            <label for='JavaScript'>JavaScript</label>
+            <input type='radio' name='language' value='Python'>
+            <label for='Python'>Python</label>
+        </div>
+        <div class=comment>
+            <label for='comment'>Comment (optional):</label>
+            <textarea name='comment' rows='10' cols='30'></textarea>
+        </div>
+        <div class=button>
+            <input type='submit' value='Submit'>
+        </div>
+    </form>
+    <div class=alert>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>
